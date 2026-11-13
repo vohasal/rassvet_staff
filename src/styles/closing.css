@@ -1,0 +1,43 @@
+/* ---------- подсчёт ---------- */
+.progress{height:6px;background:var(--olive-soft);border-radius:9px;overflow:hidden;margin:10px 0 4px}
+.progress i{display:block;height:100%;background:var(--olive);border-radius:9px;transition:width .25s}
+.prow{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.prow:last-child{border-bottom:0}
+.bsub{margin:-6px 0 6px 4px;padding:2px 0 6px 12px;border-left:3px solid var(--olive-soft);border-bottom:1px solid var(--line)}
+.brow{display:flex;align-items:center;gap:10px;padding:5px 0}
+.brow span{flex:1;min-width:0;font-size:14px;color:var(--muted)}
+.brow span b{color:var(--forest);font-weight:600}
+.pblock{border:1.5px solid var(--line);border-radius:16px;padding:2px 12px 8px;margin:12px 0}
+.pblock .prow{border-bottom:0;padding-bottom:6px}
+.pblock .bsub{margin:0;padding:0;border:0;border-top:1px dashed var(--line)}
+.bcap{font-size:12px;color:var(--muted);padding:4px 0 0}
+.brow .bdate{flex:1;min-width:0;height:42px;border:1.5px solid transparent;background:var(--cream);border-radius:12px;padding:0 8px;font-size:15px;color:var(--forest);font-family:inherit;outline:none;-webkit-appearance:none;appearance:none}
+.brow .bdate:focus{border-color:var(--olive);background:var(--focus)}
+.brow .bdate.bad,.bsub .field.bad{border-color:var(--danger)}
+.bbtn{flex:none;width:40px;height:40px;border-radius:12px;border:0;background:var(--olive-soft);color:var(--forest);font-size:22px;line-height:1;font-family:inherit;padding:0}
+.bbtn.del{background:none;color:var(--muted);font-size:20px;width:28px}
+.brow .frzl{flex:1;font-size:14px;color:var(--forest)}
+.field input[readonly]{color:var(--olive);cursor:default}
+.pname{flex:1;min-width:0}
+.pname b{display:block;font-weight:500;font-size:16px;word-break:break-word}
+.pname span{font-size:13px;color:var(--muted)}
+.tag{display:none;margin-left:6px;font-size:11px;font-weight:600;color:var(--warm);background:var(--warm-soft);padding:2px 7px;border-radius:999px;vertical-align:1px}
+.prow.low .tag{display:inline-block}
+.field{display:flex;align-items:center;background:var(--cream);border-radius:12px;padding:0 10px 0 4px;border:1.5px solid transparent;transition:.15s}
+.field:focus-within{border-color:var(--olive);background:var(--focus)}
+.prow.low .field{background:var(--warm-soft)}
+.field input{width:64px;border:0;background:none;padding:10px 4px 10px 8px;text-align:right;font-size:17px;font-weight:500;outline:none}
+.field small{color:var(--muted);font-size:13px;min-width:14px}
+
+/* ---------- список «сварить» ---------- */
+.need{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.need:last-child{border-bottom:0}
+.need .dot{width:40px;height:40px;border-radius:50%;background:var(--olive);color:var(--cream);display:grid;place-items:center;flex:0 0 auto;font-size:18px;font-weight:600}
+.need .pname span{display:block}
+.pill{font-weight:600;color:var(--warm);background:var(--warm-soft);padding:6px 11px;border-radius:999px;white-space:nowrap;font-size:15px}
+.status{display:flex;align-items:center;gap:12px;padding:14px;border-radius:14px;background:var(--ok-soft);color:var(--ok);font-weight:500;margin-top:12px}
+.status .big{font-size:28px}
+
+.empty{text-align:center;padding:28px 10px}
+.empty .icon{width:76px;height:76px;margin:0 auto 12px;border-radius:50%;background:var(--olive-soft);display:grid;place-items:center;font-size:34px}
+.empty h2{margin:0 0 6px}

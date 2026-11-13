@@ -1,0 +1,32 @@
+/* холодильник */
+.batch{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.batch:last-child{border-bottom:0}
+.batch .acts{display:flex;gap:6px;flex:0 0 auto}
+.days.frz{background:#DCE6F0;color:#3B5872}
+html[data-theme="dark"] .days.frz{background:#1E2B38;color:#A9C4DE}
+.frzline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
+.frzline em{font-style:normal;font-size:13px;color:var(--muted)}
+.switch{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:14px;cursor:pointer}
+.switch input,.edit .switch input{width:20px;height:20px;flex:0 0 20px;padding:0;accent-color:var(--forest);margin:0}
+/* профиль */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 8px;text-align:center}
+.stat b{display:block;font-size:22px;font-weight:600}
+.stat span{font-size:12px;color:var(--muted)}
+.badges{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.badge2{border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center;background:var(--card)}
+.badge2 .ic{font-size:28px;line-height:1.2}
+.badge2 b{display:block;font-size:13px;font-weight:600;margin-top:4px;line-height:1.2}
+.badge2 small{display:block;font-size:11px;color:var(--muted);margin-top:3px;line-height:1.2}
+.badge2.off{opacity:.55}
+.badge2.off .ic{filter:grayscale(1)}
+.badge2 .bar{height:4px;background:var(--olive-soft);border-radius:4px;margin-top:6px;overflow:hidden}
+.badge2 .bar i{display:block;height:100%;background:var(--olive)}
+.bk-when{flex:0 0 56px;height:60px;border-radius:14px;background:var(--olive);color:var(--forest);display:grid;place-items:center;text-align:center;line-height:1.05}
+.bk-when b{font-size:18px;display:block}
+.bk-when small{font-size:11px;opacity:.8}
+.shelf{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+.shelf:last-child{border-bottom:0}
+.days{font-weight:600;padding:5px 11px;border-radius:999px;background:var(--olive-soft);white-space:nowrap;font-size:14px}
+.days.soon{background:var(--warm-soft);color:var(--warm)}
+.days.today{background:var(--danger);color:#fff}

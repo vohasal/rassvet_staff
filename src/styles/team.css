@@ -1,0 +1,65 @@
+/* ---------- статусы ---------- */
+.stb{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:1px;white-space:nowrap}
+.st0{background:#DCE6F0;color:#3B5872}
+.st1{background:#E1EBC9;color:#4C5E1F}
+.st2{background:#F6E1BE;color:#8A5414}
+.st3{background:#0A3320;color:#F2F5CF}
+.st4,.seg button.on.st4{background:#EADCF0;color:#5E3A72}
+.st5,.seg button.on.st5{background:#F3D9D2;color:#86372A}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.seg button{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:6px 11px;font-size:13px;font-weight:600;cursor:pointer;color:var(--muted)}
+.seg button.on{border-color:transparent}
+.seg button.on.st0{background:#DCE6F0;color:#3B5872}
+.seg button.on.st1{background:#E1EBC9;color:#4C5E1F}
+.seg button.on.st2{background:#F6E1BE;color:#8A5414}
+.seg button.on.st3{background:#0A3320;color:#F2F5CF}
+.strow{padding:10px 0;border-bottom:1px solid var(--line)}
+.bdin{width:62px;border:1.5px solid transparent;background:var(--cream);border-radius:8px;padding:4px 6px;text-align:center;font:inherit;color:var(--forest);outline:none}
+.bdin:focus{border-color:var(--olive)}
+.strow:last-child{border-bottom:0}
+.form input,.form textarea{width:100%;border:1.5px solid transparent;background:var(--cream);border-radius:12px;padding:11px 12px;outline:none;margin-top:6px}
+.form input:focus,.form textarea:focus{border-color:var(--olive);background:var(--focus)}
+.form label{display:block;margin-top:12px;font-size:13px;color:var(--muted);font-weight:500}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.task{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.task:last-child{border-bottom:0}
+.task .box{margin-top:2px;cursor:pointer}
+.task.done b{text-decoration:line-through;opacity:.55}
+.task.done .box{background:var(--olive);border-color:var(--olive);color:var(--forest)}
+.ev{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.ev:last-child{border-bottom:0}
+.evd{flex:0 0 56px;height:60px;border-radius:14px;background:var(--forest);color:var(--cream);display:grid;place-items:center;text-align:center;line-height:1.05}
+.evd b{font-size:22px;display:block}
+.evd small{font-size:11px;text-transform:uppercase;opacity:.8}
+.tabcount{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--warm);color:#fff;font-size:11px;margin-left:5px;vertical-align:1px}
+
+/* ---------- график по дням ---------- */
+.dayhead{display:flex;align-items:center;gap:8px}
+.dayhead .grow{flex:1;text-align:center}
+.dayhead h2{margin:0}
+.navb{width:38px;height:38px;border-radius:50%;border:0;background:var(--olive-soft);color:var(--forest);font-size:22px;line-height:1;cursor:pointer;flex:0 0 auto}
+.navb:disabled{opacity:.3}
+.strip{display:flex;gap:6px;overflow-x:auto;margin:12px -16px 4px;padding:2px 16px 6px;scrollbar-width:none;scroll-snap-type:x proximity}
+.strip::-webkit-scrollbar{display:none}
+.dchip{flex:0 0 46px;border:0;border-radius:14px;padding:7px 0;background:var(--paper);color:var(--forest);text-align:center;cursor:pointer;scroll-snap-align:center;line-height:1.15}
+.dchip small{display:block;font-size:11px;color:var(--muted);text-transform:uppercase}
+.dchip b{font-size:17px}
+.dchip.today{box-shadow:inset 0 0 0 2px var(--olive)}
+.dchip.on{background:var(--forest);color:var(--cream)}
+.dchip.on small{color:var(--olive-2)}
+.dchip.wk{margin-left:8px}
+#dayBody{touch-action:pan-y;transition:transform .22s ease,opacity .22s ease}
+#dayBody.out-l{transform:translateX(-30px);opacity:0}
+#dayBody.out-r{transform:translateX(30px);opacity:0}
+.wip{text-align:center;padding:26px 10px 18px;color:var(--muted)}
+.wip b{display:block;font-size:17px;color:var(--forest);margin:8px 0 4px}
+
+/* ---------- смена ---------- */
+.shift{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.shift:last-child{border-bottom:0}
+.shift .ava{position:relative}
+.shift.now .ava::after{content:"";position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;background:#3FA34D;border:2px solid var(--card)}
+.shift.past{opacity:.5}
+.time{font-weight:600;white-space:nowrap;font-size:15px}
+.mini{display:inline-block;font-size:11px;font-weight:600;padding:2px 7px;border-radius:999px;background:var(--olive-soft);margin-left:6px;vertical-align:1px}
+.mini.close{background:var(--forest);color:var(--cream)}

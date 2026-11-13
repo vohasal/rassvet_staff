@@ -1,0 +1,29 @@
+/* ---------- техкарты ---------- */
+.tkbtn{border:0;background:var(--olive-soft);color:var(--forest);border-radius:10px;padding:7px 10px;font-size:13px;font-weight:600;cursor:pointer;flex:0 0 auto}
+.tkrow{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.tkrow:last-child{border-bottom:0}
+.sheet-bg{position:fixed;inset:0;background:rgba(10,51,32,.45);z-index:20;display:flex;align-items:flex-end;animation:fade .2s}
+.sheet{background:var(--paper);width:100%;max-height:92vh;overflow-y:auto;border-radius:24px 24px 0 0;padding:8px 16px calc(20px + env(safe-area-inset-bottom));animation:up .25s ease-out}
+.grab{width:40px;height:5px;border-radius:9px;background:var(--line);margin:6px auto 12px}
+@keyframes up{from{transform:translateY(40px);opacity:.4}}
+@keyframes fade{from{opacity:0}}
+.sheet h2{margin:0;font-size:22px}
+.amount{display:flex;align-items:center;gap:10px;background:var(--forest);color:var(--cream);border-radius:16px;padding:12px 14px;margin:12px 0}
+.amount span{flex:1;font-size:14px;opacity:.85}
+.amount input{width:90px;border:0;border-radius:10px;padding:9px;text-align:right;font-size:20px;font-weight:600;background:var(--cream);color:var(--forest);outline:none}
+.sizes{display:flex;gap:8px;margin:12px 0}
+.sizes button{flex:1;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:10px;font-weight:600;cursor:pointer}
+.sizes button.on{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.ing{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:16px}
+.ing:last-child{border-bottom:0}
+.ing b{white-space:nowrap}
+.ing{align-items:center}
+.ing .field{flex:0 0 auto}
+.ing .field input{width:78px;font-size:16px;padding:8px 4px 8px 6px}
+.ing.own .field{background:var(--focus);border-color:var(--forest)}
+.ing.limit span{color:var(--warm);font-weight:600}
+.ing input:disabled{opacity:.4}
+.method{white-space:pre-wrap;font-size:15px;line-height:1.5;color:var(--forest-2)}
+select{width:100%;border:1.5px solid transparent;background:var(--cream);border-radius:10px;padding:10px 12px;outline:none;font:inherit;color:var(--forest);appearance:none}
+.cl-row{display:flex;gap:8px;margin-bottom:8px}
+.cl-row input{flex:1}
