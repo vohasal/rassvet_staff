@@ -1,0 +1,32 @@
+/* Шрифт, цвета (светлая и тёмная тема), базовые стили */
+@font-face{font-family:"Corbel Rassvet";src:url("../assets/fonts/corbel-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Corbel Rassvet";src:url("../assets/fonts/corbel-bold.woff2") format("woff2");font-weight:600 700;font-style:normal;font-display:swap}
+:root{
+  --olive:#96A466; --olive-2:#A9B67C; --olive-soft:#E7ECCD;
+  --forest:#0A3320; --forest-2:#164A30;
+  --cream:#F2F5CF; --paper:#FAFBEF; --card:#FFFFFF;
+  --muted:#667A5B; --line:rgba(10,51,32,.10);
+  --warm:#C2652B; --warm-soft:#F8E6D6; --ok:#3F7A3A; --ok-soft:#E1EED7; --danger:#B4412F;
+  --r:18px; --focus:#FFFFFF;
+}
+html[data-theme="dark"]{
+  --olive-soft:#26331F; --forest:#E6ECCF; --forest-2:#C3CEAA;
+  --cream:#121C15; --paper:#0E1611; --card:#18231B; --focus:#0B120E;
+  --muted:#9AA88C; --line:rgba(230,236,207,.10);
+  --warm:#E8995B; --warm-soft:#3B2B1C; --ok:#8CC47F; --ok-soft:#1E3220; --danger:#EC7A64;
+}
+html[data-theme="dark"] .hero{--forest:#0A3320; --forest-2:#164A30; --cream:#F2F5CF; color:#0A3320}
+html[data-theme="dark"] .tabs{box-shadow:0 6px 20px rgba(0,0,0,.35)}
+html[data-theme="dark"] .dock .btn{box-shadow:0 8px 24px rgba(0,0,0,.45)}
+html[data-theme="dark"] .st3,html[data-theme="dark"] .seg button.on.st3{background:#E6ECCF;color:#0A3320}
+html[data-theme="dark"] .mini.close{background:#E6ECCF;color:#0A3320}
+html[data-theme="dark"] #toast{background:#E6ECCF;color:#0A3320}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--paper);color:var(--forest);font:16px/1.4 "Corbel Rassvet",Corbel,-apple-system,system-ui,"Segoe UI",Roboto,sans-serif}
+button,input,textarea{font:inherit;color:inherit}
+
+main{padding:16px 12px 120px}
+.card{background:var(--card);border-radius:var(--r);padding:16px;margin-bottom:12px;border:1px solid var(--line)}
+.card h2{margin:0 0 4px;font-size:19px;font-weight:600}
+.sub{color:var(--muted);font-size:14px;margin:0 0 10px}
+h3{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px}

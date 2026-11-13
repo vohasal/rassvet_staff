@@ -1,0 +1,35 @@
+/* ---------- шапка ---------- */
+.hero{position:relative;background:var(--olive);color:var(--forest);padding:18px 18px 54px;overflow:hidden}
+.hero svg.loop{position:absolute;right:-30px;top:-20px;width:220px;opacity:.55;pointer-events:none}
+.brand{display:flex;align-items:center;gap:14px;position:relative}
+.logo{width:60px;height:60px;border-radius:50%;flex:0 0 auto;box-shadow:0 0 0 3px var(--cream)}
+.brand h1{margin:0;font-size:24px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1}
+.brand p{margin:5px 0 0;font-size:14px;color:var(--forest)}
+.hello{position:relative;margin-top:14px;font-size:15px;color:var(--forest);font-weight:600}
+/* кнопки в шапке: инструкция и профиль */
+.hero-acts{position:absolute;top:16px;right:16px;display:flex;gap:8px;z-index:2}
+.hbtn{width:40px;height:40px;border-radius:50%;border:0;background:rgba(242,245,207,.9);color:#0A3320;font-size:18px;font-weight:700;cursor:pointer;display:grid;place-items:center;box-shadow:0 2px 8px rgba(10,51,32,.15)}
+.hbtn.me{background:#0A3320;color:#F2F5CF}
+.hbtn.me.on{box-shadow:0 0 0 3px #F2F5CF}
+.hbtn:active{transform:scale(.94)}
+/* инструкция */
+.help details{border-bottom:1px solid var(--line)}
+.help details:last-child{border-bottom:0}
+.help summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:13px 0;font-weight:600;font-size:16px}
+.help summary::-webkit-details-marker{display:none}
+.help summary::after{content:"›";margin-left:auto;font-size:22px;color:var(--muted);transition:transform .2s}
+.help details[open] summary::after{transform:rotate(90deg)}
+.help summary .ic{width:30px;text-align:center;font-size:18px}
+.help ul{margin:0 0 12px;padding-left:20px}
+.help li{margin:6px 0;font-size:15px;line-height:1.45;color:var(--forest-2)}
+
+/* ---------- вкладки ---------- */
+.tabs-wrap{position:sticky;top:0;z-index:5;margin-top:-30px;padding:0 12px}
+.tabs{display:flex;gap:4px;overflow-x:auto;position:relative;background:var(--card);border-radius:999px;padding:5px;box-shadow:0 6px 20px rgba(10,51,32,.10);scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:1 0 auto;border:0;background:none;padding:9px 12px;border-radius:999px;font-size:14px;font-weight:500;color:var(--muted);cursor:pointer;white-space:nowrap;transition:.2s}
+.tab.on{background:var(--forest);color:var(--cream)}
+.tab{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.tabs.drag{scroll-behavior:auto}
+.tab.lift{position:relative;z-index:2;transition:box-shadow .2s,background .2s;background:var(--olive-soft);color:var(--forest);box-shadow:0 6px 16px rgba(10,51,32,.25)}
+.tab.lift.on{background:var(--forest);color:var(--cream)}

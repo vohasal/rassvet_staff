@@ -1,0 +1,43 @@
+/* ---------- кнопки ---------- */
+.btn{display:block;width:100%;border:0;border-radius:14px;padding:15px;font-size:16px;font-weight:600;cursor:pointer;background:var(--forest);color:var(--cream);margin-top:14px;transition:transform .1s,opacity .2s}
+.btn:active{transform:scale(.98)}
+.btn:disabled{opacity:.5}
+.btn.locked{opacity:.6;font-size:15px}
+.btn.soft{background:var(--olive-soft);color:var(--forest)}
+.btn.ok{background:var(--olive);color:var(--forest)}
+.dock{position:fixed;left:0;right:0;bottom:0;padding:12px 12px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--paper) 30%);z-index:6}
+.dock .btn{margin:0;box-shadow:0 8px 24px rgba(10,51,32,.25)}
+
+.check{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.check:last-child{border-bottom:0}
+.reg{border-bottom:1px solid var(--line)}
+.reg:last-child{border-bottom:0}
+.reg summary{list-style:none;cursor:pointer;padding:13px 0;font-weight:600;display:flex;justify-content:space-between;gap:10px}
+.reg summary::-webkit-details-marker{display:none}
+.reg summary::after{content:'›';color:var(--muted);transition:.15s}
+.reg[open] summary::after{transform:rotate(90deg)}
+.reg .rt{padding:0 0 14px;font-size:15px;line-height:1.5}
+.reg .rt h3{font-size:15px;margin:14px 0 4px}
+.reg .rt p{margin:0 0 6px}
+.reg .rt li{margin:0 0 4px 18px}
+.reg mark{background:var(--warm-soft);color:inherit;border-radius:4px;padding:0 2px}
+.skd{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:2px}
+.box{width:28px;height:28px;border-radius:9px;border:2px solid var(--olive);display:grid;place-items:center;flex:0 0 auto;color:transparent;font-weight:700;transition:.15s}
+.check.on .box{background:var(--forest);border-color:var(--forest);color:var(--cream)}
+.check.made{cursor:default}
+.check.made .box{background:var(--olive);border-color:var(--olive);color:var(--forest)}
+.check.made b{text-decoration:line-through;opacity:.6}
+.yld{display:none;align-items:center;justify-content:space-between;gap:10px;margin-top:8px;cursor:default}
+.check.on .yld{display:flex}
+.yld em{font-style:normal;font-size:13px;font-weight:600;color:var(--forest)}
+.yld .field{background:var(--focus);border-color:var(--forest)}
+.yld .field.bad{border-color:var(--danger)}
+/* «Сварил что-то ещё» — сворачиваемый блок */
+details.card>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary .pname h2{margin:0}
+details.card>summary .pname .sub{margin:2px 0 0}
+details.card>summary::after{content:"›";font-size:24px;line-height:1;color:var(--muted);transition:transform .2s}
+details.card[open]>summary::after{transform:rotate(90deg)}
+details.card[open]>summary{margin-bottom:4px}
+.dock.hide{display:none}
